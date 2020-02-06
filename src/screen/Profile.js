@@ -357,7 +357,6 @@ class Profile extends React.Component {
                             onBackdropPress={() => {
                                 this.setState({modal: false});
                             }}
-                            animationType='verical'
                             duration={600}>
                             <View
                                 style={{
@@ -375,7 +374,7 @@ class Profile extends React.Component {
                                         borderRadius: 20,
                                         backgroundColor: '#E6E6E6'
                                     }}>
-                                    <Text
+                                     <Text
                                         style={{
                                             color: 'black',
                                             fontFamily: 'Bariol_Bold',

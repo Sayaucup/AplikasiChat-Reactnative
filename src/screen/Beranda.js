@@ -33,6 +33,7 @@ class App extends Component {
             Loading: true
         };
     }
+    
     user = () => {
         return fetch('https://calm-mesa-84057.herokuapp.com/tampil')
             .then(
@@ -108,18 +109,16 @@ class App extends Component {
     // shared             }         } else if (result.action ===
     // Share.dismissedAction) {              dismissed         } } catch (error) {
     // alert(error.message);     } }; fucn = () => {     if (this.state.Loading){
-    // return(             <Modal transparent visible={this.state.Loading}>
-    // <View                     style={{                         marginTop:150,
-    // justifyContent: 'center',                         alignItems: 'center'
-    // }}>                     <ActivityIndicator size={50} color='#EF6F6E'/>
-    // </View>             </Modal>         )     } }
+    // return(             <Modal transparent visible={this.state.Loading}> <View
+    // style={{                         marginTop:150, justifyContent: 'center',
+    // alignItems: 'center' }}>                     <ActivityIndicator size={50}
+    // color='#EF6F6E'/> </View>             </Modal>         )     } }
 
     renderItems = ({item}) => {
         const qwe = parseInt(this.state.id)
         if (item.id !== qwe) {
             return (
                 <View>
-
                     <View>
                         <TouchableOpacity
                             onPress={() => this.roomchat([
@@ -166,8 +165,14 @@ class App extends Component {
                                     <Text style={styles.nama}>{item.name}</Text>
                                     <Text style={styles.email}>{item.email}</Text>
                                 </View>
-                               
-                                    <Icon name="chevron-right" style={{marginLeft:290}} size={50} color="#EF6F6E"/>
+
+                                <Icon
+                                    name="chevron-right"
+                                    style={{
+                                        marginLeft: 290
+                                    }}
+                                    size={50}
+                                    color="#EF6F6E"/>
 
                             </View>
                             <View

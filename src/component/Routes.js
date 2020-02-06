@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, View, Text} from 'react-native';
+import {Dimensions} from 'react-native';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createDrawerNavigator} from 'react-navigation-drawer';
