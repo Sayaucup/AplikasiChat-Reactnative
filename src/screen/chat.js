@@ -13,6 +13,7 @@ import {
     ToastAndroid,
     TouchableWithoutFeedback
 } from 'react-native';
+import moment from 'moment'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Axios from 'axios';
 import {AnimatedModal} from 'react-native-modal-animated'
@@ -34,7 +35,8 @@ class chat extends React.Component {
             idpesan: '',
             avatar: null,
             role: true,
-            modal: false
+            modal: false,
+            time : moment().format('HH:mm')
         };
     }
 
@@ -179,7 +181,7 @@ class chat extends React.Component {
                                     fontFamily: 'Bariol_Bold',
                                     color: '#fff'
                                 }}>
-                                {item.created_at}
+                                {this.state.time}
                             </Text>
                         </View>
                     </TouchableOpacity>
@@ -308,7 +310,7 @@ class chat extends React.Component {
                                     fontFamily: 'Bariol_Bold',
                                     color: '#EF6F6E'
                                 }}>
-                                {item.created_at}
+                                {this.state.time}
                             </Text>
                         </View>
                     </View>
